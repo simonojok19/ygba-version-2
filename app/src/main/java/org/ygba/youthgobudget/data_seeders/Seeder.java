@@ -281,15 +281,38 @@ public class Seeder {
 
     public void seedCommunityWishes() {
         for(int i = 0; i <= 20; i++) {
-            CommunityWish communityWish = new CommunityWish(
-                    "Central",
-                    "Masaka",
-                    "Agriculture",
-                    "Kimanya",
-                    "2020/2021",
-                    "Education",
-                    "There must be enough books"
-            );
+            CommunityWish communityWish;
+            if ( i < 5) {
+                communityWish = new CommunityWish(
+                        "Central",
+                        "Masaka",
+                        "Agriculture Sector",
+                        "Kimanya",
+                        "2020/2021",
+                        "Education",
+                        "There must be enough books"
+                );
+            } else if ((i > 5) && (i < 10)) {
+                communityWish = new CommunityWish(
+                        "Central",
+                        "Masaka",
+                        "Education Sector",
+                        "Kimanya",
+                        "2020/2021",
+                        "Education",
+                        "There must be enough books"
+                );
+            } else {
+                communityWish = new CommunityWish(
+                        "Central",
+                        "Masaka",
+                        "Health Sector",
+                        "Kimanya",
+                        "2020/2021",
+                        "Education",
+                        "There must be enough books"
+                );
+            }
             ygbaRepository.saveCommunityWish(communityWish);
         }
     }
