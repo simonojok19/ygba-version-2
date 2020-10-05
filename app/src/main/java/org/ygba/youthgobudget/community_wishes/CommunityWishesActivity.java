@@ -62,7 +62,7 @@ public class CommunityWishesActivity extends AppCompatActivity implements  Adapt
     RadioGroup healthSectorRadioGroup;
     RadioGroup educationRadioGroup;
     private CommunityWishesActivityViewModel communityWishesActivityViewModel;
-    private ArrayList<Sector> educations;
+    private ArrayList<Sector> agricultures;
     private ArrayList<Sector> healths;
 
     @Override
@@ -71,8 +71,13 @@ public class CommunityWishesActivity extends AppCompatActivity implements  Adapt
         setContentView(R.layout.activity_community_wish);
         initViews();
         communityWishesActivityViewModel = new ViewModelProvider(this).get(CommunityWishesActivityViewModel.class);
-        initEducationWishes();
+        initAgricultureWishes();
         initHealthWishes();
+        initEducationWishes();
+    }
+
+    public void initEducationWishes() {
+
     }
     public void initHealthWishes() {
         healths = new ArrayList<>();
@@ -98,40 +103,40 @@ public class CommunityWishesActivity extends AppCompatActivity implements  Adapt
         healths.add(health4);
     }
 
-    private void initEducationWishes() {
-        educations = new ArrayList<>();
-        Sector education = new Sector(
+    private void initAgricultureWishes() {
+        agricultures = new ArrayList<>();
+        Sector agricture = new Sector(
                 getResources().getString(R.string.agricultural_extension_services),
                 getResources().getString(R.string.agricultural_extension_services_hint));
-        educations.add(education);
-        Sector education1 = new Sector(
+        agricultures.add(agricture);
+        Sector agricture1 = new Sector(
                 getResources().getString(R.string.market_linkages),
                 getResources().getString(R.string.market_linkages_hint));
-        educations.add(education1);
-        Sector education2 = new Sector(
+        agricultures.add(agricture1);
+        Sector agricture2 = new Sector(
                 getResources().getString(R.string.input_and_tools_provision),
                 getResources().getString(R.string.input_and_tools_provision_hint));
-        educations.add(education2);
-        Sector education3 = new Sector(
+        agricultures.add(agricture2);
+        Sector agricture3 = new Sector(
                 getResources().getString(R.string.access_to_credit_and_capital),
                 getResources().getString(R.string.access_to_credit_and_capital_hint));
-        educations.add(education3);
-        Sector education4 = new Sector(
+        agricultures.add(agricture3);
+        Sector agricture4 = new Sector(
                 getResources().getString(R.string.access_to_hands_training),
                 getResources().getString(R.string.access_to_hands_training_hint));
-        educations.add(education4);
-        Sector education5 = new Sector(
+        agricultures.add(agricture4);
+        Sector agricture5 = new Sector(
                 getResources().getString(R.string.value_addition),
                 getResources().getString(R.string.value_addition_hint));
-        educations.add(education5);
-        Sector education6 = new Sector(
+        agricultures.add(agricture5);
+        Sector agricture6 = new Sector(
                 getResources().getString(R.string.recruitment_of_officers),
                 getResources().getString(R.string.recruitment_of_officers_hint));
-        educations.add(education6);
-        Sector education7 = new Sector(
+        agricultures.add(agricture6);
+        Sector agricture7 = new Sector(
                 getResources().getString(R.string.irrigation_systems),
                 getResources().getString(R.string.irrigation_systems_hint));
-        educations.add(education7);
+        agricultures.add(agricture7);
 
     }
 
@@ -348,28 +353,28 @@ public class CommunityWishesActivity extends AppCompatActivity implements  Adapt
         RadioGroup group = findViewById(R.id.agriculture_sector_radio_group);
         switch (group.getCheckedRadioButtonId()) {
             case R.id.market_linkages: {
-                return new String[]{educations.get(1).service_point, educations.get(1).community_need};
+                return new String[]{agricultures.get(1).service_point, agricultures.get(1).community_need};
             }
             case R.id.input_and_tools_provision: {
-                return new String[]{educations.get(2).service_point, educations.get(2).community_need};
+                return new String[]{agricultures.get(2).service_point, agricultures.get(2).community_need};
             }
             case R.id.access_to_credit_and_capital: {
-                return new String[]{educations.get(3).service_point, educations.get(3).community_need};
+                return new String[]{agricultures.get(3).service_point, agricultures.get(3).community_need};
             }
             case R.id.access_to_hands_training: {
-                return new String[]{educations.get(4).service_point, educations.get(4).community_need};
+                return new String[]{agricultures.get(4).service_point, agricultures.get(4).community_need};
             }
             case R.id.value_addition: {
-                return new String[]{educations.get(5).service_point, educations.get(5).community_need};
+                return new String[]{agricultures.get(5).service_point, agricultures.get(5).community_need};
             }
             case R.id.recruitment_of_officers: {
-                return new String[]{educations.get(6).service_point, educations.get(6).community_need};
+                return new String[]{agricultures.get(6).service_point, agricultures.get(6).community_need};
             }
             case R.id.irrigation_systems: {
-                return new String[]{educations.get(7).service_point, educations.get(7).community_need};
+                return new String[]{agricultures.get(7).service_point, agricultures.get(7).community_need};
             }
             default: {
-                return new String[]{educations.get(0).service_point, educations.get(0).community_need};
+                return new String[]{agricultures.get(0).service_point, agricultures.get(0).community_need};
             }
         }
     }
