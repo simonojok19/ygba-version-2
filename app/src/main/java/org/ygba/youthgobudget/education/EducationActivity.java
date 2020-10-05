@@ -172,7 +172,7 @@ public class EducationActivity extends AppCompatActivity implements Validator.Va
     private void initViews() {
         eDateTextView = findViewById(R.id.date);
         eDateTextView.setText(DynamicData.getDate());
-        eFinancialYearSpinner = findViewById(R.id.quarter_spinner);
+        eFinancialYearSpinner = findViewById(R.id.region_spinner);
         eDistrictEditText = findViewById(R.id.district_text_edit);
         eVillageEditText = findViewById(R.id.village_text_edit);
         eParishEditText = findViewById(R.id.parish_text_edit);

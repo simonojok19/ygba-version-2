@@ -165,7 +165,7 @@
         android:textColor="@color/colorPrimaryText"/>
 
     <Spinner
-        android:id="@+id/quarter_spinner"
+        android:id="@+id/region_spinner"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:textSize="15sp"

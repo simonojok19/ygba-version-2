@@ -18,7 +18,6 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.w3c.dom.Text;
 import org.ygba.youthgobudget.R;
 import org.ygba.youthgobudget.data.agriculture.AgricultureQuestion;
 import org.ygba.youthgobudget.dialogs.DatePickerActivity;
@@ -233,7 +232,7 @@ public class AgricultureActivity extends AppCompatActivity implements  AdapterVi
     }
 
     private void initViews() {
-        quarterSpinner = findViewById(R.id.quarter_spinner);
+        quarterSpinner = findViewById(R.id.region_spinner);
         ArrayAdapter<String> aa=new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, quarterList);
         aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         quarterSpinner.setAdapter(aa);
@@ -385,7 +384,7 @@ public class AgricultureActivity extends AppCompatActivity implements  AdapterVi
         Log.d("adapterclicked", "adapterclicked");
         if (view.getId() == R.id.financial_year_spinner) {
             selectedFinancialYear = financialYearList[position];
-        } else if (view.getId() == R.id.quarter_spinner) {
+        } else if (view.getId() == R.id.region_spinner) {
             selectedQuarter = quarterList[position];
         }
     }

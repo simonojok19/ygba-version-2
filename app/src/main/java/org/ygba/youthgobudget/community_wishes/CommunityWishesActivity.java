@@ -2,7 +2,6 @@ package org.ygba.youthgobudget.community_wishes;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -10,18 +9,13 @@ import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.lifecycle.ViewModelProviders;
 
 import org.ygba.youthgobudget.R;
-import org.ygba.youthgobudget.agriculture.AgricultureActivity;
-import org.ygba.youthgobudget.agriculture.AgricultureActivityViewModel;
 import org.ygba.youthgobudget.data.community_wishes.CommunityWish;
-import org.ygba.youthgobudget.dialogs.DatePickerActivity;
 import org.ygba.youthgobudget.dialogs.DistrictPickerActivity;
 import org.ygba.youthgobudget.dialogs.SubCountyPickerActivity;
 
@@ -75,7 +69,7 @@ public class CommunityWishesActivity extends AppCompatActivity implements  Adapt
     }
 
     private void initViews() {
-        quarterSpinner = findViewById(R.id.quarter_spinner);
+        quarterSpinner = findViewById(R.id.region_spinner);
         ArrayAdapter<String> aa=new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, quarterList);
         aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         quarterSpinner.setAdapter(aa);
@@ -171,7 +165,7 @@ public class CommunityWishesActivity extends AppCompatActivity implements  Adapt
     public void onItemSelected(AdapterView<?> adapterView, View view, int position, long id) {
         if (view.getId() == R.id.financial_year_spinner) {
             selectedFinancialYear = financialYearList[position];
-        } else if (view.getId() == R.id.quarter_spinner) {
+        } else if (view.getId() == R.id.region_spinner) {
             selectedQuarter = quarterList[position];
         } else if (view.getId() == R.id.sector_spinner) {
             selectedSector = sectorList[position];

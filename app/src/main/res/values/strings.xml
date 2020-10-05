@@ -460,4 +460,5 @@
     <string name="recruitment_of_stuff_hint">Reason(s): The teacher to pupils’ ratio is very low compared to the Education standard</string>
     <string name="school_infrastructure">School infrastructures i.e. classrooms and toilet facilities</string>
     <string name="school_infrastructure_hint">Reason(s): \tLimited number of classrooms to accommodate the learners  \t\t\tLimited number toilets at most schools</string>
+    <string name="region_label">Region</string>
 </resources>
