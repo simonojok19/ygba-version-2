@@ -63,6 +63,7 @@ public class CommunityWishesActivity extends AppCompatActivity implements  Adapt
     RadioGroup educationRadioGroup;
     private CommunityWishesActivityViewModel communityWishesActivityViewModel;
     private ArrayList<Sector> educations;
+    private ArrayList<Sector> healths;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -71,6 +72,30 @@ public class CommunityWishesActivity extends AppCompatActivity implements  Adapt
         initViews();
         communityWishesActivityViewModel = new ViewModelProvider(this).get(CommunityWishesActivityViewModel.class);
         initEducationWishes();
+        initHealthWishes();
+    }
+    public void initHealthWishes() {
+        healths = new ArrayList<>();
+        Sector health = new Sector(
+                getResources().getString(R.string.hiv_information_services),
+                getResources().getString(R.string.hiv_information_services_hint));
+        healths.add(health);
+        Sector health1 = new Sector(
+                getResources().getString(R.string.essential_drugs),
+                getResources().getString(R.string.essential_drugs_hint));
+        healths.add(health1);
+        Sector health2 = new Sector(
+                getResources().getString(R.string.strengthening_and_monitoring_services),
+                getResources().getString(R.string.strengthening_and_monitoring_services_hint));
+        healths.add(health2);
+        Sector health3 = new Sector(
+                getResources().getString(R.string.infrastructure_development),
+                getResources().getString(R.string.infrastructure_development_hint));
+        healths.add(health3);
+        Sector health4 = new Sector(
+                getResources().getString(R.string.recruitment_personnel),
+                getResources().getString(R.string.recruitment_personnel_hint));
+        healths.add(health4);
     }
 
     private void initEducationWishes() {
