@@ -291,9 +291,37 @@ public class CommunityWishesActivity extends AppCompatActivity implements  Adapt
         if (selectedSector.equals(sectorList[0])) {
             return getAgricultureAnswers();
         }
+        return null;
     }
 
     private String[] getAgricultureAnswers() {
+        RadioGroup group = findViewById(R.id.agriculture_sector_radio_group);
+        switch (group.getCheckedRadioButtonId()) {
+            case R.id.agricultural_extension_services: {
+                return new String[]{educations.get(0).service_point, educations.get(0).community_need};
+            }
+            case R.id.market_linkages: {
+                return new String[]{educations.get(1).service_point, educations.get(1).community_need};
+            }
+            case R.id.input_and_tools_provision: {
+                return new String[]{educations.get(2).service_point, educations.get(2).community_need};
+            }
+            case R.id.access_to_credit_and_capital: {
+                return new String[]{educations.get(3).service_point, educations.get(3).community_need};
+            }
+            case R.id.access_to_hands_training: {
+                return new String[]{educations.get(4).service_point, educations.get(4).community_need};
+            }
+            case R.id.value_addition: {
+                return new String[]{educations.get(5).service_point, educations.get(5).community_need};
+            }
+            case R.id.recruitment_of_officers: {
+                return new String[]{educations.get(6).service_point, educations.get(6).community_need};
+            }
+            case R.id.irrigation_systems: {
+                return new String[]{educations.get(7).service_point, educations.get(7).community_need};
+            }
+        }
         return null;
     }
 }
