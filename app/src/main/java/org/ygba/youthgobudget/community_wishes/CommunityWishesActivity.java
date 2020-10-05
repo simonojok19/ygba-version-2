@@ -158,7 +158,7 @@ public class CommunityWishesActivity extends AppCompatActivity implements  Adapt
                         "Masaka",
                         "Agriculture",
                         "Kimanya",
-                        "2020/2021",
+                        selectedFinancialYear,
                         "Education",
                         "There must be enough books"
                 );
