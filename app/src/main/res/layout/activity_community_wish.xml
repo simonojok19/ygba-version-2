@@ -245,8 +245,7 @@
             android:id="@+id/agriculture_sector_radio_group"
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            >
+            android:layout_height="wrap_content">
             <RadioButton android:id="@+id/question1Yes"
                 android:checked="true"
                 android:textSize="15sp"

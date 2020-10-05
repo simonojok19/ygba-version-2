@@ -55,7 +55,7 @@ public class CommunityWishesActivity extends AppCompatActivity implements  Adapt
     private final String[] sectorList = {"Agriculture Sector", "Health Sector", "Education Sector"};
     private String selectedQuarter;
     private String selectedFinancialYear;
-    private String selectedSector;
+    private String selectedSector = sectorList[1];
 
     RadioGroup agricultureRadioGroup;
 
@@ -83,7 +83,24 @@ public class CommunityWishesActivity extends AppCompatActivity implements  Adapt
         ArrayAdapter<String> sa=new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, sectorList);
         sa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         sectorSpinner.setAdapter(sa);
-        sectorSpinner.setOnItemSelectedListener(this);
+        sectorSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                selectedSector = sectorList[position];
+                if (selectedSector.equals(sectorList[0])) {
+                    agricultureRadioGroup.setVisibility(View.VISIBLE);
+                } else if (selectedSector.equals(sectorList[1])) {
+                    agricultureRadioGroup.setVisibility(View.GONE);
+                } else if(selectedSector.equals(sectorList[2])){
+                    agricultureRadioGroup.setVisibility(View.GONE);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
 
 
         districtText = findViewById(R.id.district_text_edit);
@@ -120,7 +137,6 @@ public class CommunityWishesActivity extends AppCompatActivity implements  Adapt
 
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int position, long id) {
-        Log.d("adapterclicked", "adapterclicked");
         Toast.makeText(this, "Visi", Toast.LENGTH_SHORT).show();
         if (view.getId() == R.id.financial_year_spinner) {
             selectedFinancialYear = financialYearList[position];
