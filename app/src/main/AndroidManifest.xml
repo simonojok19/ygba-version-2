@@ -35,7 +35,9 @@
             android:name="org.apache.http.legacy"
             android:required="false" />
 
-        <activity android:name=".community_wishes.CommunityWishesActivity" />
+        <activity
+            android:parentActivityName=".MainActivity"
+            android:name=".community_wishes.CommunityWishesActivity" />
         <activity
             android:name=".allocation.AllocationActivity"
             android:parentActivityName=".MainActivity" />

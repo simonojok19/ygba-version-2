@@ -22,7 +22,7 @@ import org.ygba.youthgobudget.dialogs.SubCountyPickerActivity;
 import java.util.ArrayList;
 import java.util.Objects;
 
-public class CommunityWishesActivity extends AppCompatActivity implements  AdapterView.OnItemSelectedListener {
+public class CommunityWishesActivity extends AppCompatActivity {
     private   final int DISTRICT_NAME_REQUESTER_CODE = 1;
     private   final int SUB_COUNTY_NAME_REQUEST_CODE = 2;
     private  final int QUESTION_2_DATE_RECEIVED_1_REQUEST_CODE = 3;
@@ -175,7 +175,17 @@ public class CommunityWishesActivity extends AppCompatActivity implements  Adapt
         ArrayAdapter<String> fa=new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, financialYearList);
         fa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         financialSpinner.setAdapter(fa);
-        financialSpinner.setOnItemSelectedListener(this);
+        financialSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                selectedFinancialYear = financialYearList[position];
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
 
         sectorSpinner = findViewById(R.id.sector_spinner);
         ArrayAdapter<String> sa=new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, sectorList);
@@ -255,25 +265,6 @@ public class CommunityWishesActivity extends AppCompatActivity implements  Adapt
                 communityWishesActivityViewModel.saveCommunityWish(communityWish);
             }
         });
-    }
-
-    @Override
-    public void onItemSelected(AdapterView<?> adapterView, View view, int position, long id) {
-        if (view.getId() == R.id.financial_year_spinner) {
-            selectedFinancialYear = financialYearList[position];
-        } else if (view.getId() == R.id.region_spinner) {
-            selectedRegion = regionList[position];
-        } else if (view.getId() == R.id.sector_spinner) {
-            selectedSector = sectorList[position];
-            if (position == 1) {
-                agricultureRadioGroup.setVisibility(View.VISIBLE);
-            }
-            agricultureRadioGroup.setVisibility(View.VISIBLE);
-        }
-    }
-
-    @Override
-    public void onNothingSelected(AdapterView<?> adapterView) {
     }
 
     @Override

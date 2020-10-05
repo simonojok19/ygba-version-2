@@ -10,6 +10,7 @@ import org.ygba.youthgobudget.data.agriculture.AgricultureDao;
 import org.ygba.youthgobudget.data.agriculture.AgricultureQuestion;
 import org.ygba.youthgobudget.data.budget_information.BudgetInformationForm;
 import org.ygba.youthgobudget.data.budget_information.BudgetInformationFormDao;
+import org.ygba.youthgobudget.data.community_wishes.CommunityWish;
 import org.ygba.youthgobudget.data.community_wishes.CommunityWishesDao;
 import org.ygba.youthgobudget.data.education.EducationQuestion;
 import org.ygba.youthgobudget.data.education.EducationQuestionDao;
@@ -35,7 +36,8 @@ import java.util.concurrent.Executors;
         BudgetInformationForm.class,
         HealthQuestion.class,
         District.class,
-        SubCounty.class
+        SubCounty.class,
+        CommunityWish.class
 }, version = 1, exportSchema = false)
 public abstract class YGBDatabase extends RoomDatabase {
     private static YGBDatabase INSTANCE;
