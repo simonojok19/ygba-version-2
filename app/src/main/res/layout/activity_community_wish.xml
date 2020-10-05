@@ -241,7 +241,7 @@
             tools:ignore="RtlSymmetry" />
 
         <RadioGroup
-            android:visibility="visible"
+            android:visibility="gone"
             android:id="@+id/agriculture_sector_radio_group"
             style="@style/AppTheme.RadioGroupStyle.Vertical">
 
@@ -317,6 +317,58 @@
             <TextView
                 style="@style/AppTheme.InputHintStyle"
                 android:text="@string/irrigation_systems_hint"/>
+        </RadioGroup>
+
+        <RadioGroup
+            android:visibility="gone"
+            android:id="@+id/health_sector_radio_group"
+            style="@style/AppTheme.RadioGroupStyle.Vertical">
+
+            <RadioButton
+                android:id="@+id/hiv_information_services"
+                android:checked="true"
+                style="@style/AppTheme.RadioButtonStyle"
+                android:text="@string/hiv_information_services" />
+
+            <TextView
+                android:text="@string/hiv_information_services_hint"
+                style="@style/AppTheme.InputHintStyle"/>
+
+            <RadioButton
+                style="@style/AppTheme.RadioButtonStyle"
+                android:id="@+id/essential_drugs"
+                android:text="@string/essential_drugs" />
+
+            <TextView
+                android:text="@string/essential_drugs_hint"
+                style="@style/AppTheme.InputHintStyle"/>
+
+            <RadioButton
+                style="@style/AppTheme.RadioButtonStyle"
+                android:id="@+id/strengthening_and_monitoring_services"
+                android:text="@string/strengthening_and_monitoring_services" />
+
+            <TextView
+                android:text="@string/strengthening_and_monitoring_services_hint"
+                style="@style/AppTheme.InputHintStyle"/>
+
+            <RadioButton
+                style="@style/AppTheme.RadioButtonStyle"
+                android:id="@+id/infrastructure_development"
+                android:text="@string/infrastructure_development" />
+
+            <TextView
+                android:text="@string/infrastructure_development_hint"
+                style="@style/AppTheme.InputHintStyle"/>
+
+            <RadioButton
+                style="@style/AppTheme.RadioButtonStyle"
+                android:id="@+id/recruitment_personnel"
+                android:text="@string/recruitment_personnel" />
+
+            <TextView
+                android:text="@string/recruitment_personnel_hint"
+                style="@style/AppTheme.InputHintStyle"/>
         </RadioGroup>
 
 

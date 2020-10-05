@@ -58,6 +58,7 @@ public class CommunityWishesActivity extends AppCompatActivity implements  Adapt
     private String selectedSector = sectorList[1];
 
     RadioGroup agricultureRadioGroup;
+    RadioGroup healthSectorRadioGroup;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -90,6 +91,7 @@ public class CommunityWishesActivity extends AppCompatActivity implements  Adapt
                 if (selectedSector.equals(sectorList[0])) {
                     agricultureRadioGroup.setVisibility(View.VISIBLE);
                 } else if (selectedSector.equals(sectorList[1])) {
+                    healthSectorRadioGroup.setVisibility(View.VISIBLE);
                     agricultureRadioGroup.setVisibility(View.GONE);
                 } else if(selectedSector.equals(sectorList[2])){
                     agricultureRadioGroup.setVisibility(View.GONE);
@@ -133,11 +135,11 @@ public class CommunityWishesActivity extends AppCompatActivity implements  Adapt
         });
 
         agricultureRadioGroup = findViewById(R.id.agriculture_sector_radio_group);
+        healthSectorRadioGroup = findViewById(R.id.health_sector_radio_group);
     }
 
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int position, long id) {
-        Toast.makeText(this, "Visi", Toast.LENGTH_SHORT).show();
         if (view.getId() == R.id.financial_year_spinner) {
             selectedFinancialYear = financialYearList[position];
         } else if (view.getId() == R.id.quarter_spinner) {

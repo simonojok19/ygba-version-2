@@ -444,4 +444,14 @@
     <string name="recruitment_of_officers_hint">Reason(s): Limited number of agricultural officers at the sub-counties to provide extension services to the increasing number of farmers</string>
     <string name="irrigation_systems">Irrigation systems</string>
     <string name="irrigation_systems_hint">Reason(s): Farmer entirely depend on rainfall limiting their production, yet they could produce through the year using cost-effective irrigation systems given the enormous available water sources such as rivers and streams</string>
+    <string name="hiv_information_services"><![CDATA[nclusive SRHR & HIV information and services]]></string>
+    <string name="hiv_information_services_hint"><![CDATA[Reason(s): Lack of youth corners and adolescent friendly SRHR information & services at some health facilities]]></string>
+    <string name="essential_drugs"><![CDATA["Essential drugs, equipment & treatment toolkits  stocking "]]></string>
+    <string name="essential_drugs_hint"><![CDATA[Reason(s): Frequent essential drugs & treatment toolkits stock out at most health facilities]]></string>
+    <string name="strengthening_and_monitoring_services">"Strengthening monitoring of health services at the health facilities "</string>
+    <string name="strengthening_and_monitoring_services_hint"><![CDATA[Reason(s): \tCases of drugs & treatment toolkits by some medical personnel  \t\t\tLaxity among some medical personnel to work & unprofessional treatment while attending to patients]]></string>
+    <string name="infrastructure_development">Infrastructural development such as wards and toilet construction</string>
+    <string name="infrastructure_development_hint"><![CDATA[Reason(s): \tLimited number of wards to accommodate inpatients  \t\t\tLimited number of toilet at the health facilities to serve both outpatients & inpatients on a daily basis]]></string>
+    <string name="recruitment_personnel"><![CDATA["Recruitment of qualified & competent medical personnel "]]></string>
+    <string name="recruitment_personnel_hint"><![CDATA[Reason(s): Few qualified & competent medical personnel at the health facilities to attend to both outpatients and inpatients on daily basis]]></string>
 </resources>
