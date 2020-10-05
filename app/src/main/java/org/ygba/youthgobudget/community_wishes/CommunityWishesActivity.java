@@ -338,7 +338,22 @@ public class CommunityWishesActivity extends AppCompatActivity implements  Adapt
         } else if (selectedSector.equals(sectorList[1])) {
             return getHealthSectorAnswers();
         } else {
-            return null;
+            return getEducationAnswers();
+        }
+    }
+
+    private String[] getEducationAnswers() {
+        RadioGroup radioGroup = findViewById(R.id.education_sector_radio_group);
+        switch (radioGroup.getCheckedRadioButtonId()) {
+            case R.id.school_infrastructure: {
+                return new String[] { educations.get(2).service_point, educations.get(2).community_need };
+            }
+            case R.id.recruitment_of_stuff: {
+                return new String[] { educations.get(1).service_point, educations.get(1).community_need };
+            }
+            default: {
+                return new String[] { educations.get(0).service_point, educations.get(0).community_need };
+            }
         }
     }
 
