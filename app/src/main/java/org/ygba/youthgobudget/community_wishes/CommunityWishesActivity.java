@@ -105,38 +105,38 @@ public class CommunityWishesActivity extends AppCompatActivity implements  Adapt
 
     private void initAgricultureWishes() {
         agricultures = new ArrayList<>();
-        Sector agricture = new Sector(
+        Sector agriculture = new Sector(
                 getResources().getString(R.string.agricultural_extension_services),
                 getResources().getString(R.string.agricultural_extension_services_hint));
-        agricultures.add(agricture);
-        Sector agricture1 = new Sector(
+        agricultures.add(agriculture);
+        Sector agriculture1 = new Sector(
                 getResources().getString(R.string.market_linkages),
                 getResources().getString(R.string.market_linkages_hint));
-        agricultures.add(agricture1);
-        Sector agricture2 = new Sector(
+        agricultures.add(agriculture1);
+        Sector agriculture2 = new Sector(
                 getResources().getString(R.string.input_and_tools_provision),
                 getResources().getString(R.string.input_and_tools_provision_hint));
-        agricultures.add(agricture2);
-        Sector agricture3 = new Sector(
+        agricultures.add(agriculture2);
+        Sector agriculture3 = new Sector(
                 getResources().getString(R.string.access_to_credit_and_capital),
                 getResources().getString(R.string.access_to_credit_and_capital_hint));
-        agricultures.add(agricture3);
-        Sector agricture4 = new Sector(
+        agricultures.add(agriculture3);
+        Sector agriculture4 = new Sector(
                 getResources().getString(R.string.access_to_hands_training),
                 getResources().getString(R.string.access_to_hands_training_hint));
-        agricultures.add(agricture4);
-        Sector agricture5 = new Sector(
+        agricultures.add(agriculture4);
+        Sector agriculture5 = new Sector(
                 getResources().getString(R.string.value_addition),
                 getResources().getString(R.string.value_addition_hint));
-        agricultures.add(agricture5);
-        Sector agricture6 = new Sector(
+        agricultures.add(agriculture5);
+        Sector agriculture6 = new Sector(
                 getResources().getString(R.string.recruitment_of_officers),
                 getResources().getString(R.string.recruitment_of_officers_hint));
-        agricultures.add(agricture6);
-        Sector agricture7 = new Sector(
+        agricultures.add(agriculture6);
+        Sector agriculture7 = new Sector(
                 getResources().getString(R.string.irrigation_systems),
                 getResources().getString(R.string.irrigation_systems_hint));
-        agricultures.add(agricture7);
+        agricultures.add(agriculture7);
 
     }
 
