@@ -62,7 +62,7 @@ public class CommunityWishesActivity extends AppCompatActivity implements  Adapt
     RadioGroup healthSectorRadioGroup;
     RadioGroup educationRadioGroup;
     private CommunityWishesActivityViewModel communityWishesActivityViewModel;
-    private ArrayList<Education> educations;
+    private ArrayList<Sector> educations;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -75,35 +75,35 @@ public class CommunityWishesActivity extends AppCompatActivity implements  Adapt
 
     private void initEducationWishes() {
         educations = new ArrayList<>();
-        Education education = new Education(
+        Sector education = new Sector(
                 getResources().getString(R.string.agricultural_extension_services),
                 getResources().getString(R.string.agricultural_extension_services_hint));
         educations.add(education);
-        Education education1 = new Education(
+        Sector education1 = new Sector(
                 getResources().getString(R.string.market_linkages),
                 getResources().getString(R.string.market_linkages_hint));
         educations.add(education1);
-        Education education2 = new Education(
+        Sector education2 = new Sector(
                 getResources().getString(R.string.input_and_tools_provision),
                 getResources().getString(R.string.input_and_tools_provision_hint));
         educations.add(education2);
-        Education education3 = new Education(
+        Sector education3 = new Sector(
                 getResources().getString(R.string.access_to_credit_and_capital),
                 getResources().getString(R.string.access_to_credit_and_capital_hint));
         educations.add(education3);
-        Education education4 = new Education(
+        Sector education4 = new Sector(
                 getResources().getString(R.string.access_to_hands_training),
                 getResources().getString(R.string.access_to_hands_training_hint));
         educations.add(education4);
-        Education education5 = new Education(
+        Sector education5 = new Sector(
                 getResources().getString(R.string.value_addition),
                 getResources().getString(R.string.value_addition_hint));
         educations.add(education5);
-        Education education6 = new Education(
+        Sector education6 = new Sector(
                 getResources().getString(R.string.recruitment_of_officers),
                 getResources().getString(R.string.recruitment_of_officers_hint));
         educations.add(education6);
-        Education education7 = new Education(
+        Sector education7 = new Sector(
                 getResources().getString(R.string.irrigation_systems),
                 getResources().getString(R.string.irrigation_systems_hint));
         educations.add(education7);
@@ -262,11 +262,11 @@ public class CommunityWishesActivity extends AppCompatActivity implements  Adapt
         agentNumberEditText.setText("");
     }
 
-    private static class Education {
+    private static class Sector {
         private String service_point;
         private String community_need;
 
-        public Education(String service_point, String community_need) {
+        public Sector(String service_point, String community_need) {
             this.service_point = service_point;
             this.community_need = community_need;
         }
@@ -299,7 +299,12 @@ public class CommunityWishesActivity extends AppCompatActivity implements  Adapt
     }
 
     private String[] getHealthSectorAnswers() {
-        return new String[0];
+        RadioGroup group = findViewById(R.id.health_sector_radio_group);
+        switch (group.getCheckedRadioButtonId()) {
+            default: {
+                return null;
+            }
+        }
     }
 
     private String[] getAgricultureAnswers() {
