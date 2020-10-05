@@ -5,6 +5,7 @@ import androidx.lifecycle.LiveData;
 import org.ygba.youthgobudget.data.YGBDatabase;
 import org.ygba.youthgobudget.data.agriculture.AgricultureQuestion;
 import org.ygba.youthgobudget.data.budget_information.BudgetInformationForm;
+import org.ygba.youthgobudget.data.community_wishes.CommunityWish;
 import org.ygba.youthgobudget.data.education.EducationQuestion;
 import org.ygba.youthgobudget.data.health.HealthQuestion;
 import org.ygba.youthgobudget.data.helpers.district.District;
@@ -232,5 +233,14 @@ public class YGBARepository {
             }
         };
         return YGBDatabase.db_executor.submit(callable).get();
+    }
+
+    public void saveCommunityWish(final CommunityWish communityWish) {
+        YGBDatabase.db_executor.execute(new Runnable() {
+            @Override
+            public void run() {
+                ygbDatabase.communityWishesDao().insertCommunityWish(communityWish);
+            }
+        });
     }
 }
