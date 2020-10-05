@@ -10,6 +10,7 @@ import org.ygba.youthgobudget.data.agriculture.AgricultureDao;
 import org.ygba.youthgobudget.data.agriculture.AgricultureQuestion;
 import org.ygba.youthgobudget.data.budget_information.BudgetInformationForm;
 import org.ygba.youthgobudget.data.budget_information.BudgetInformationFormDao;
+import org.ygba.youthgobudget.data.community_wishes.CommunityWishesDao;
 import org.ygba.youthgobudget.data.education.EducationQuestion;
 import org.ygba.youthgobudget.data.education.EducationQuestionDao;
 import org.ygba.youthgobudget.data.health.HealthQuestion;
@@ -46,6 +47,7 @@ public abstract class YGBDatabase extends RoomDatabase {
     public abstract HealthQuestionDao healthQuestionDao();
     public abstract DistrictDao districtDao();
     public abstract SubCountyDao subCountyDao();
+    public abstract CommunityWishesDao communityWishesDao();
 
 
     public static final int NUMBER_OF_THREADS = 5;
