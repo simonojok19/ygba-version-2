@@ -160,8 +160,8 @@ public class CommunityWishesActivity extends AppCompatActivity implements  Adapt
                 CommunityWish communityWish = new CommunityWish(
                         selectedRegion,
                         districtText.getText().toString(),
-                        "Agriculture",
-                        "Kimanya",
+                        selectedSector,
+                        divisionEditText.getText().toString(),
                         selectedFinancialYear,
                         "Education",
                         "There must be enough books"
