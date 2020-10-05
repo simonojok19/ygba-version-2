@@ -454,4 +454,10 @@
     <string name="infrastructure_development_hint"><![CDATA[Reason(s): \tLimited number of wards to accommodate inpatients  \t\t\tLimited number of toilet at the health facilities to serve both outpatients & inpatients on a daily basis]]></string>
     <string name="recruitment_personnel"><![CDATA["Recruitment of qualified & competent medical personnel "]]></string>
     <string name="recruitment_personnel_hint"><![CDATA[Reason(s): Few qualified & competent medical personnel at the health facilities to attend to both outpatients and inpatients on daily basis]]></string>
+    <string name="well_equipped_library_facilities"><![CDATA[Well-equipped library & provision of teaching facilities]]></string>
+    <string name="well_equipped_library_facilities_hint"><![CDATA[Reason(s):\tMost schools lack reading materials & library \t\t\tPoor teaching facilities in most schools]]></string>
+    <string name="recruitment_of_stuff">"Recruitment of qualified and competent teaching staff "</string>
+    <string name="recruitment_of_stuff_hint">Reason(s): The teacher to pupils’ ratio is very low compared to the Education standard</string>
+    <string name="school_infrastructure">School infrastructures i.e. classrooms and toilet facilities</string>
+    <string name="school_infrastructure_hint">Reason(s): \tLimited number of classrooms to accommodate the learners  \t\t\tLimited number toilets at most schools</string>
 </resources>
