@@ -14,9 +14,13 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.lifecycle.ViewModelProviders;
 
 import org.ygba.youthgobudget.R;
 import org.ygba.youthgobudget.agriculture.AgricultureActivity;
+import org.ygba.youthgobudget.agriculture.AgricultureActivityViewModel;
+import org.ygba.youthgobudget.data.community_wishes.CommunityWish;
 import org.ygba.youthgobudget.dialogs.DatePickerActivity;
 import org.ygba.youthgobudget.dialogs.DistrictPickerActivity;
 import org.ygba.youthgobudget.dialogs.SubCountyPickerActivity;
@@ -60,12 +64,14 @@ public class CommunityWishesActivity extends AppCompatActivity implements  Adapt
     RadioGroup agricultureRadioGroup;
     RadioGroup healthSectorRadioGroup;
     RadioGroup educationRadioGroup;
+    private CommunityWishesActivityViewModel communityWishesActivityViewModel;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_community_wish);
         initViews();
+        communityWishesActivityViewModel = new ViewModelProvider(this).get(CommunityWishesActivityViewModel.class);
     }
 
     private void initViews() {
@@ -143,6 +149,22 @@ public class CommunityWishesActivity extends AppCompatActivity implements  Adapt
         agricultureRadioGroup = findViewById(R.id.agriculture_sector_radio_group);
         healthSectorRadioGroup = findViewById(R.id.health_sector_radio_group);
         educationRadioGroup = findViewById(R.id.education_sector_radio_group);
+
+        findViewById(R.id.saved_form_data).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CommunityWish communityWish = new CommunityWish(
+                        "Central",
+                        "Masaka",
+                        "Agriculture",
+                        "Kimanya",
+                        "2020/2021",
+                        "Education",
+                        "There must be enough books"
+                );
+                communityWishesActivityViewModel.saveCommunityWish(communityWish);
+            }
+        });
     }
 
     @Override
