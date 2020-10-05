@@ -8,6 +8,7 @@ import androidx.lifecycle.ViewModelProvider;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -381,6 +382,7 @@ public class AgricultureActivity extends AppCompatActivity implements  AdapterVi
 
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int position, long id) {
+        Log.d("adapterclicked", "adapterclicked");
         if (view.getId() == R.id.financial_year_spinner) {
             selectedFinancialYear = financialYearList[position];
         } else if (view.getId() == R.id.quarter_spinner) {
@@ -390,7 +392,7 @@ public class AgricultureActivity extends AppCompatActivity implements  AdapterVi
 
     @Override
     public void onNothingSelected(AdapterView<?> adapterView) {
-        selectedQuarter = "";
+        Log.d("Nothing", "adapterclicked");
     }
 
     @Override

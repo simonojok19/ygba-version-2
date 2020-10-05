@@ -2,6 +2,7 @@ package org.ygba.youthgobudget.community_wishes;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -70,16 +71,19 @@ public class CommunityWishesActivity extends AppCompatActivity implements  Adapt
         ArrayAdapter<String> aa=new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, quarterList);
         aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         quarterSpinner.setAdapter(aa);
+        quarterSpinner.setOnItemSelectedListener(this);
 
         financialSpinner = findViewById(R.id.financial_year_spinner);
         ArrayAdapter<String> fa=new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, financialYearList);
         fa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         financialSpinner.setAdapter(fa);
+        financialSpinner.setOnItemSelectedListener(this);
 
         sectorSpinner = findViewById(R.id.sector_spinner);
         ArrayAdapter<String> sa=new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, sectorList);
         sa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         sectorSpinner.setAdapter(sa);
+        sectorSpinner.setOnItemSelectedListener(this);
 
 
         districtText = findViewById(R.id.district_text_edit);
@@ -116,6 +120,8 @@ public class CommunityWishesActivity extends AppCompatActivity implements  Adapt
 
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int position, long id) {
+        Log.d("adapterclicked", "adapterclicked");
+        Toast.makeText(this, "Visi", Toast.LENGTH_SHORT).show();
         if (view.getId() == R.id.financial_year_spinner) {
             selectedFinancialYear = financialYearList[position];
         } else if (view.getId() == R.id.quarter_spinner) {
@@ -125,7 +131,6 @@ public class CommunityWishesActivity extends AppCompatActivity implements  Adapt
             if (position == 1) {
                 agricultureRadioGroup.setVisibility(View.VISIBLE);
             }
-            Toast.makeText(this, "Visi", Toast.LENGTH_SHORT).show();
             agricultureRadioGroup.setVisibility(View.VISIBLE);
         }
     }
