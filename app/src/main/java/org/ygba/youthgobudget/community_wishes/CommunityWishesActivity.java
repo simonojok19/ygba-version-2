@@ -59,6 +59,7 @@ public class CommunityWishesActivity extends AppCompatActivity implements  Adapt
 
     RadioGroup agricultureRadioGroup;
     RadioGroup healthSectorRadioGroup;
+    RadioGroup educationRadioGroup;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -89,11 +90,16 @@ public class CommunityWishesActivity extends AppCompatActivity implements  Adapt
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 selectedSector = sectorList[position];
                 if (selectedSector.equals(sectorList[0])) {
+                    educationRadioGroup.setVisibility(View.GONE);
                     agricultureRadioGroup.setVisibility(View.VISIBLE);
+                    healthSectorRadioGroup.setVisibility(View.GONE);
                 } else if (selectedSector.equals(sectorList[1])) {
                     healthSectorRadioGroup.setVisibility(View.VISIBLE);
                     agricultureRadioGroup.setVisibility(View.GONE);
+                    educationRadioGroup.setVisibility(View.GONE);
                 } else if(selectedSector.equals(sectorList[2])){
+                    healthSectorRadioGroup.setVisibility(View.GONE);
+                    educationRadioGroup.setVisibility(View.VISIBLE);
                     agricultureRadioGroup.setVisibility(View.GONE);
                 }
             }
@@ -136,6 +142,7 @@ public class CommunityWishesActivity extends AppCompatActivity implements  Adapt
 
         agricultureRadioGroup = findViewById(R.id.agriculture_sector_radio_group);
         healthSectorRadioGroup = findViewById(R.id.health_sector_radio_group);
+        educationRadioGroup = findViewById(R.id.education_sector_radio_group);
     }
 
     @Override
