@@ -64,6 +64,7 @@ public class CommunityWishesActivity extends AppCompatActivity implements  Adapt
     private CommunityWishesActivityViewModel communityWishesActivityViewModel;
     private ArrayList<Sector> agricultures;
     private ArrayList<Sector> healths;
+    private ArrayList<Sector> educations;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -77,6 +78,19 @@ public class CommunityWishesActivity extends AppCompatActivity implements  Adapt
     }
 
     public void initEducationWishes() {
+        educations = new ArrayList<>();
+        Sector education = new Sector(
+                getResources().getString(R.string.well_equipped_library_facilities),
+                getResources().getString(R.string.well_equipped_library_facilities_hint));
+        educations.add(education);
+        Sector education1 = new Sector(
+                getResources().getString(R.string.recruitment_of_stuff),
+                getResources().getString(R.string.recruitment_of_stuff_hint));
+        educations.add(education1);
+        Sector education2 = new Sector(
+                getResources().getString(R.string.school_infrastructure),
+                getResources().getString(R.string.school_infrastructure_hint));
+        educations.add(education2);
 
     }
     public void initHealthWishes() {
