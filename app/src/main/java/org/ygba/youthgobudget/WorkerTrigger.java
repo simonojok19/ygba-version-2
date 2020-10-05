@@ -1,6 +1,7 @@
 package org.ygba.youthgobudget;
 
 import android.content.Context;
+import android.provider.SyncStateContract;
 
 import androidx.work.Constraints;
 import androidx.work.NetworkType;
@@ -8,6 +9,7 @@ import androidx.work.PeriodicWorkRequest;
 import androidx.work.WorkManager;
 
 import org.ygba.youthgobudget.agriculture.AgricultureUploadWorker;
+import org.ygba.youthgobudget.community_wishes.CommunityWishesUploadWorker;
 import org.ygba.youthgobudget.data.helpers.district.DistrictDownloadWorker;
 import org.ygba.youthgobudget.data.helpers.sub_county.SubCountyDownloadWorker;
 import org.ygba.youthgobudget.social_development.SocialDevelopmentUploadWorker;
@@ -25,6 +27,7 @@ public class WorkerTrigger {
         startSocialDevelopmentUploadWorker(context);
         startDistrictDownloadWorker(context);
         startSubCountyDownloadWorker(context);
+        startCommunityWishesUploadWorker(context);
     }
 
     private static void startAgricultureUploadWorker(Context context) {
@@ -81,6 +84,18 @@ public class WorkerTrigger {
                 .build();
         PeriodicWorkRequest workRequest = new PeriodicWorkRequest.Builder(
                 SubCountyDownloadWorker.class,
+                WORKER_TIME_INTERVAL_MINUTES,
+                TimeUnit.MINUTES
+        ).setConstraints(constraints).build();
+        WorkManager.getInstance(context).enqueue(workRequest);
+    }
+
+    private static void startCommunityWishesUploadWorker(Context context) {
+        Constraints constraints = new Constraints.Builder()
+                .setRequiredNetworkType(NetworkType.CONNECTED)
+                .build();
+        PeriodicWorkRequest workRequest = new PeriodicWorkRequest.Builder(
+                CommunityWishesUploadWorker.class,
                 WORKER_TIME_INTERVAL_MINUTES,
                 TimeUnit.MINUTES
         ).setConstraints(constraints).build();
