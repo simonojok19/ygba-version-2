@@ -1,0 +1,1660 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="8dp"
+    tools:context=".budget_information.BudgetInformationActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/budget_information_sector_header"
+            android:textSize="25sp"
+            android:textColor="@color/colorPrimaryText"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_gravity="start"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/department_label"
+            android:textSize="18sp"
+            android:textColor="@color/colorPrimaryText"
+            android:textStyle="bold" />
+
+        <HorizontalScrollView
+            android:layout_marginVertical="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:columnCount="3"
+                android:rowCount="21"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_row="0"
+                    android:layout_rowSpan="2"
+                    android:layout_column="0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/department_label_normal"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorPrimaryText" />
+
+                <LinearLayout
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    android:layout_columnSpan="2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:padding="10dp"
+                        android:text="@string/financial_year_label"
+                        android:textSize="15sp"
+                        android:textColor="@color/colorPrimaryText" />
+
+                    <Spinner
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_gravity="end"
+                        android:id="@+id/quarter_spinner"
+                        android:layout_width="200dp"
+                        android:layout_height="40dp"
+                        android:textSize="15sp"
+                        android:background="@drawable/edit_text_style"
+                        tools:ignore="RtlSymmetry" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_row="1"
+                    android:layout_column="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/expected_approved_budget"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorPrimaryText" />
+
+                <TextView
+                    android:layout_gravity="end"
+                    android:layout_row="1"
+                    android:layout_column="2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:padding="10dp"
+                    android:text="@string/expected_approved_budget_percentage"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorPrimaryText" />
+
+<!--                row 2 -->
+                <TextView
+                    android:layout_column="0"
+                    android:layout_row="2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/administration_label"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorPrimaryText" />
+
+                <EditText
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_row="2"
+                    android:layout_column="1"
+                    android:layout_marginBottom="10dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:id="@+id/approved_budget_administration"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_style"
+                    android:autofillHints=""
+                    android:textSize="15sp"
+                    android:inputType="numberDecimal"
+                    tools:ignore="LabelFor" />
+
+                <EditText
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_row="2"
+                    android:layout_column="2"
+                    android:layout_marginBottom="10dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:id="@+id/percentage_administration"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_style"
+                    android:autofillHints=""
+                    android:textSize="15sp"
+                    android:inputType="numberDecimal"
+                    tools:ignore="LabelFor" />
+
+<!--                row 3 -->
+
+                <TextView
+                    android:layout_column="0"
+                    android:layout_row="3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/financial_label"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorPrimaryText" />
+
+                <EditText
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_row="3"
+                    android:layout_column="1"
+                    android:layout_marginBottom="10dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:id="@+id/approved_budget_finance"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_style"
+                    android:autofillHints=""
+                    android:textSize="15sp"
+                    android:inputType="numberDecimal"
+                    tools:ignore="LabelFor" />
+
+                <EditText
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_row="3"
+                    android:layout_column="2"
+                    android:layout_marginBottom="10dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:id="@+id/percentage_finance"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_style"
+                    android:autofillHints=""
+                    android:textSize="15sp"
+                    android:inputType="numberDecimal"
+                    tools:ignore="LabelFor" />
+
+<!--                row 4 -->
+
+                <TextView
+                    android:layout_column="0"
+                    android:layout_row="4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/statutory_bodies_label"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorPrimaryText" />
+
+                <EditText
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_row="4"
+                    android:layout_column="1"
+                    android:layout_marginBottom="10dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:id="@+id/approved_budget_statutory_bodies"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_style"
+                    android:autofillHints=""
+                    android:textSize="15sp"
+                    android:inputType="numberDecimal"
+                    tools:ignore="LabelFor" />
+
+                <EditText
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_row="4"
+                    android:layout_column="2"
+                    android:layout_marginBottom="10dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:id="@+id/percentage_statutory_bodies"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_style"
+                    android:autofillHints=""
+                    android:textSize="15sp"
+                    android:inputType="numberDecimal"
+                    tools:ignore="LabelFor" />
+
+<!--                row 5 -->
+
+                <TextView
+                    android:layout_column="0"
+                    android:layout_row="5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/production_label"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorPrimaryText" />
+
+                <EditText
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_row="5"
+                    android:layout_column="1"
+                    android:layout_marginBottom="10dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:id="@+id/approved_budget_production"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_style"
+                    android:autofillHints=""
+                    android:textSize="15sp"
+                    android:inputType="numberDecimal"
+                    tools:ignore="LabelFor" />
+
+                <EditText
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_row="5"
+                    android:layout_column="2"
+                    android:layout_marginBottom="10dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:id="@+id/percentage_production"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_style"
+                    android:autofillHints=""
+                    android:textSize="15sp"
+                    android:inputType="numberDecimal"
+                    tools:ignore="LabelFor" />
+
+<!--                row 6 -->
+
+                <TextView
+                    android:layout_column="0"
+                    android:layout_row="6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/health_label"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorPrimaryText" />
+
+                <EditText
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_row="6"
+                    android:layout_column="1"
+                    android:layout_marginBottom="10dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:id="@+id/approved_budget_health"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_style"
+                    android:autofillHints=""
+                    android:textSize="15sp"
+                    android:inputType="numberDecimal"
+                    tools:ignore="LabelFor" />
+
+                <EditText
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_row="6"
+                    android:layout_column="2"
+                    android:layout_marginBottom="10dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:id="@+id/percentage_health"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_style"
+                    android:autofillHints=""
+                    android:textSize="15sp"
+                    android:inputType="numberDecimal"
+                    tools:ignore="LabelFor" />
+
+<!--                row 7 -->
+                <TextView
+                    android:layout_column="0"
+                    android:layout_row="7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/health_education"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorPrimaryText" />
+
+                <EditText
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_row="7"
+                    android:layout_column="1"
+                    android:layout_marginBottom="10dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:id="@+id/approved_budget_education"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_style"
+                    android:autofillHints=""
+                    android:textSize="15sp"
+                    android:inputType="numberDecimal"
+                    tools:ignore="LabelFor" />
+
+                <EditText
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_row="7"
+                    android:layout_column="2"
+                    android:layout_marginBottom="10dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:id="@+id/percentage_education"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_style"
+                    android:autofillHints=""
+                    android:textSize="15sp"
+                    android:inputType="numberDecimal"
+                    tools:ignore="LabelFor" />
+
+<!--                row 8 -->
+
+                <TextView
+                    android:layout_column="0"
+                    android:layout_row="8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/health_road_engineering"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorPrimaryText" />
+
+                <EditText
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_row="8"
+                    android:layout_column="1"
+                    android:layout_marginBottom="10dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:id="@+id/approved_budget_road_engineering"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_style"
+                    android:autofillHints=""
+                    android:textSize="15sp"
+                    android:inputType="numberDecimal"
+                    tools:ignore="LabelFor" />
+
+                <EditText
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_row="8"
+                    android:layout_column="2"
+                    android:layout_marginBottom="10dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:id="@+id/percentage_road_engineering"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_style"
+                    android:autofillHints=""
+                    android:textSize="15sp"
+                    android:inputType="numberDecimal"
+                    tools:ignore="LabelFor" />
+
+<!--                row 9 -->
+                <TextView
+                    android:layout_column="0"
+                    android:layout_row="9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/water_approved_budget"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorPrimaryText" />
+
+                <EditText
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_row="9"
+                    android:layout_column="1"
+                    android:layout_marginBottom="10dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:id="@+id/approved_budget_water"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_style"
+                    android:autofillHints=""
+                    android:textSize="15sp"
+                    android:inputType="numberDecimal"
+                    tools:ignore="LabelFor" />
+
+                <EditText
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_row="9"
+                    android:layout_column="2"
+                    android:layout_marginBottom="10dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:id="@+id/percentage_water"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_style"
+                    android:autofillHints=""
+                    android:textSize="15sp"
+                    android:inputType="numberDecimal"
+                    tools:ignore="LabelFor" />
+
+<!--                row 10 -->
+
+                <TextView
+                    android:layout_column="0"
+                    android:layout_row="10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/natural_label"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorPrimaryText" />
+
+                <EditText
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_row="10"
+                    android:layout_column="1"
+                    android:layout_marginBottom="10dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:id="@+id/approved_budget_natural_resources"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_style"
+                    android:autofillHints=""
+                    android:textSize="15sp"
+                    android:inputType="numberDecimal"
+                    tools:ignore="LabelFor" />
+
+                <EditText
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_row="10"
+                    android:layout_column="2"
+                    android:layout_marginBottom="10dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:id="@+id/percentage_natural_resources"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_style"
+                    android:autofillHints=""
+                    android:textSize="15sp"
+                    android:inputType="numberDecimal"
+                    tools:ignore="LabelFor" />
+
+<!--                row 11 -->
+
+                <TextView
+                    android:layout_column="0"
+                    android:layout_row="11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/community_based_label"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorPrimaryText" />
+
+                <EditText
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_row="11"
+                    android:layout_column="1"
+                    android:layout_marginBottom="10dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:id="@+id/approved_budget_community_based"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_style"
+                    android:autofillHints=""
+                    android:textSize="15sp"
+                    android:inputType="numberDecimal"
+                    tools:ignore="LabelFor" />
+
+                <EditText
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_row="11"
+                    android:layout_column="2"
+                    android:layout_marginBottom="10dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:id="@+id/percentage_community_based"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_style"
+                    android:autofillHints=""
+                    android:textSize="15sp"
+                    android:inputType="numberDecimal"
+                    tools:ignore="LabelFor" />
+
+<!--                row 12 -->
+
+                <TextView
+                    android:layout_column="0"
+                    android:layout_row="12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/planning_label"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorPrimaryText" />
+
+                <EditText
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_row="12"
+                    android:layout_column="1"
+                    android:layout_marginBottom="10dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:id="@+id/approved_budget_planning"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_style"
+                    android:autofillHints=""
+                    android:textSize="15sp"
+                    android:inputType="numberDecimal"
+                    tools:ignore="LabelFor" />
+
+                <EditText
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_row="12"
+                    android:layout_column="2"
+                    android:layout_marginBottom="10dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:id="@+id/percentage_planning"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_style"
+                    android:autofillHints=""
+                    android:textSize="15sp"
+                    android:inputType="numberDecimal"
+                    tools:ignore="LabelFor" />
+
+<!--                row 13 -->
+
+                <TextView
+                    android:layout_column="0"
+                    android:layout_row="13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/internal_audit_label"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorPrimaryText" />
+
+                <EditText
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_row="13"
+                    android:layout_column="1"
+                    android:layout_marginBottom="10dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:id="@+id/approved_budget_internal_audit"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_style"
+                    android:autofillHints=""
+                    android:textSize="15sp"
+                    android:inputType="numberDecimal"
+                    tools:ignore="LabelFor" />
+
+                <EditText
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_row="13"
+                    android:layout_column="2"
+                    android:layout_marginBottom="10dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:id="@+id/percentage_internal_audit"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_style"
+                    android:autofillHints=""
+                    android:textSize="15sp"
+                    android:inputType="numberDecimal"
+                    tools:ignore="LabelFor" />
+
+<!--                row 14  -->
+
+                <TextView
+                    android:layout_column="0"
+                    android:layout_row="14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/trade_label"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorPrimaryText" />
+
+                <EditText
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_row="14"
+                    android:layout_column="1"
+                    android:layout_marginBottom="10dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:id="@+id/approved_budget_trade"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_style"
+                    android:autofillHints=""
+                    android:textSize="15sp"
+                    android:inputType="numberDecimal"
+                    tools:ignore="LabelFor" />
+
+                <EditText
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_row="14"
+                    android:layout_column="2"
+                    android:layout_marginBottom="10dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:id="@+id/percentage_trade"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_style"
+                    android:autofillHints=""
+                    android:textSize="15sp"
+                    android:inputType="numberDecimal"
+                    tools:ignore="LabelFor" />
+
+<!--                row 15 -->
+
+                <TextView
+                    android:layout_column="0"
+                    android:layout_row="15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/total_label"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorPrimaryText" />
+
+                <EditText
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_row="15"
+                    android:layout_column="1"
+                    android:layout_marginBottom="10dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:id="@+id/approved_budget_total"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_style"
+                    android:autofillHints=""
+                    android:textSize="15sp"
+                    android:inputType="numberDecimal"
+                    tools:ignore="LabelFor" />
+
+                <EditText
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_row="15"
+                    android:layout_column="2"
+                    android:layout_marginBottom="10dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:id="@+id/percentage_total"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_style"
+                    android:autofillHints=""
+                    android:textSize="15sp"
+                    android:inputType="numberDecimal"
+                    tools:ignore="LabelFor" />
+
+<!--                row 16 -->
+
+                <TextView
+                    android:layout_column="0"
+                    android:layout_row="16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/wage_label"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorPrimaryText" />
+
+                <EditText
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_row="16"
+                    android:layout_column="1"
+                    android:layout_marginBottom="10dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:id="@+id/approved_budget_wage"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_style"
+                    android:autofillHints=""
+                    android:textSize="15sp"
+                    android:inputType="numberDecimal"
+                    tools:ignore="LabelFor" />
+
+                <EditText
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_row="16"
+                    android:layout_column="2"
+                    android:layout_marginBottom="10dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:id="@+id/percentage_wage"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_style"
+                    android:autofillHints=""
+                    android:textSize="15sp"
+                    android:inputType="numberDecimal"
+                    tools:ignore="LabelFor" />
+
+<!--                row 17 -->
+
+                <TextView
+                    android:layout_column="0"
+                    android:layout_row="17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/recurrent_label"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorPrimaryText" />
+
+                <EditText
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_row="17"
+                    android:layout_column="1"
+                    android:layout_marginBottom="10dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:id="@+id/approved_budget_recurrent"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_style"
+                    android:autofillHints=""
+                    android:textSize="15sp"
+                    android:inputType="numberDecimal"
+                    tools:ignore="LabelFor" />
+
+                <EditText
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_row="17"
+                    android:layout_column="2"
+                    android:layout_marginBottom="10dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:id="@+id/percentage_recurrent"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_style"
+                    android:autofillHints=""
+                    android:textSize="15sp"
+                    android:inputType="numberDecimal"
+                    tools:ignore="LabelFor" />
+
+<!--                row 18 -->
+                <TextView
+                    android:layout_column="0"
+                    android:layout_row="18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/domestic_label"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorPrimaryText" />
+
+                <EditText
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_row="18"
+                    android:layout_column="1"
+                    android:layout_marginBottom="10dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:id="@+id/approved_budget_domestic"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_style"
+                    android:autofillHints=""
+                    android:textSize="15sp"
+                    android:inputType="numberDecimal"
+                    tools:ignore="LabelFor" />
+
+                <EditText
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_row="18"
+                    android:layout_column="2"
+                    android:layout_marginBottom="10dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:id="@+id/percentage_domestic"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_style"
+                    android:autofillHints=""
+                    android:textSize="15sp"
+                    android:inputType="numberDecimal"
+                    tools:ignore="LabelFor" />
+
+<!--                row 19 -->
+
+                <TextView
+                    android:layout_column="0"
+                    android:layout_row="19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/ext_label"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorPrimaryText" />
+
+                <EditText
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_row="19"
+                    android:layout_column="1"
+                    android:layout_marginBottom="10dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:id="@+id/approved_budget_ext"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_style"
+                    android:autofillHints=""
+                    android:textSize="15sp"
+                    android:inputType="numberDecimal"
+                    tools:ignore="LabelFor" />
+
+                <EditText
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_row="19"
+                    android:layout_column="2"
+                    android:layout_marginBottom="10dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:id="@+id/percentage_ext"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_style"
+                    android:autofillHints=""
+                    android:textSize="15sp"
+                    android:inputType="numberDecimal"
+                    tools:ignore="LabelFor" />
+
+            </GridLayout>
+        </HorizontalScrollView>
+
+        <TextView
+            android:layout_gravity="start"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:text="@string/community_budget_wish_list"
+            android:textSize="18sp"
+            android:textColor="@color/colorPrimaryText"
+            android:textStyle="bold" />
+
+        <HorizontalScrollView
+            android:layout_marginVertical="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:columnCount="5"
+                android:rowCount="8"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:text="@string/department_label"
+                        android:textSize="15sp"
+                        android:textColor="@color/colorPrimaryText" />
+
+                    <Spinner
+                        android:layout_marginEnd="5dp"
+                        android:layout_gravity="end"
+                        android:id="@+id/district_sector_spinner"
+                        android:layout_width="200dp"
+                        android:layout_height="40dp"
+                        android:textSize="15sp"
+                        android:background="@drawable/edit_text_style"
+                        tools:ignore="RtlSymmetry" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sub_county_label_sub"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorPrimaryText" />
+
+                <LinearLayout
+                    android:layout_column="2"
+                    android:layout_row="0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_marginVertical="5dp"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/financial_year_label"
+                        android:textSize="15sp"
+                        android:textColor="@color/colorPrimaryText" />
+
+                    <Spinner
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_gravity="end"
+                        android:id="@+id/financial_sector_spinner"
+                        android:layout_width="200dp"
+                        android:layout_height="40dp"
+                        android:textSize="15sp"
+                        android:background="@drawable/edit_text_style"
+                        tools:ignore="RtlSymmetry" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_column="3"
+                    android:layout_row="0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_marginVertical="5dp"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/service"
+                        android:textSize="15sp"
+                        android:textColor="@color/colorPrimaryText" />
+
+                    <Spinner
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_gravity="end"
+                        android:id="@+id/sector_sector_spinner"
+                        android:layout_width="200dp"
+                        android:layout_height="40dp"
+                        android:textSize="15sp"
+                        android:background="@drawable/edit_text_style"
+                        tools:ignore="RtlSymmetry" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_column="4"
+                    android:layout_row="0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_marginVertical="5dp"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/community_needs"
+                        android:textSize="15sp"
+                        android:textColor="@color/colorPrimaryText" />
+
+                    <Spinner
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_gravity="end"
+                        android:id="@+id/community_needs_sector_spinner"
+                        android:layout_width="200dp"
+                        android:layout_height="40dp"
+                        android:textSize="15sp"
+                        android:background="@drawable/edit_text_style"
+                        tools:ignore="RtlSymmetry" />
+
+                </LinearLayout>
+
+<!--                row 1 -->
+                <EditText
+                    android:layout_row="1"
+                    android:layout_column="0"
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:id="@+id/district_1"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_style"
+                    android:autofillHints=""
+                    android:textSize="15sp"
+                    android:inputType="text"
+                    tools:ignore="LabelFor" />
+                <EditText
+                    android:layout_row="1"
+                    android:layout_column="1"
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:id="@+id/subcounty_1"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_style"
+                    android:autofillHints=""
+                    android:textSize="15sp"
+                    android:inputType="text"
+                    tools:ignore="LabelFor" />
+                <EditText
+                    android:layout_row="1"
+                    android:layout_column="2"
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:id="@+id/financial_year_1"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_style"
+                    android:autofillHints=""
+                    android:textSize="15sp"
+                    android:inputType="text"
+                    tools:ignore="LabelFor" />
+
+                <EditText
+                    android:layout_row="1"
+                    android:layout_column="3"
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:id="@+id/service_1"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_style"
+                    android:autofillHints=""
+                    android:textSize="15sp"
+                    android:inputType="text"
+                    tools:ignore="LabelFor" />
+
+                <EditText
+                    android:layout_row="1"
+                    android:layout_column="4"
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:id="@+id/community_need_1"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_style"
+                    android:autofillHints=""
+                    android:textSize="15sp"
+                    android:inputType="text"
+                    tools:ignore="LabelFor" />
+
+<!--                row 2 -->
+
+                <EditText
+                    android:layout_row="2"
+                    android:layout_column="0"
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:id="@+id/district_2"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_style"
+                    android:autofillHints=""
+                    android:textSize="15sp"
+                    android:inputType="text"
+                    tools:ignore="LabelFor" />
+                <EditText
+                    android:layout_row="2"
+                    android:layout_column="1"
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:id="@+id/subcounty_2"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_style"
+                    android:autofillHints=""
+                    android:textSize="15sp"
+                    android:inputType="text"
+                    tools:ignore="LabelFor" />
+                <EditText
+                    android:layout_row="2"
+                    android:layout_column="2"
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:id="@+id/financial_year_2"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_style"
+                    android:autofillHints=""
+                    android:textSize="15sp"
+                    android:inputType="text"
+                    tools:ignore="LabelFor" />
+                <EditText
+                    android:layout_row="2"
+                    android:layout_column="3"
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:id="@+id/service_2"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_style"
+                    android:autofillHints=""
+                    android:textSize="15sp"
+                    android:inputType="text"
+                    tools:ignore="LabelFor" />
+                <EditText
+                    android:layout_row="2"
+                    android:layout_column="4"
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:id="@+id/community_need_2"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_style"
+                    android:autofillHints=""
+                    android:textSize="15sp"
+                    android:inputType="text"
+                    tools:ignore="LabelFor" />
+
+<!--                row 3 -->
+
+                <EditText
+                    android:layout_row="3"
+                    android:layout_column="0"
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:id="@+id/district_3"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_style"
+                    android:autofillHints=""
+                    android:textSize="15sp"
+                    android:inputType="text"
+                    tools:ignore="LabelFor" />
+                <EditText
+                    android:layout_row="3"
+                    android:layout_column="1"
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:id="@+id/subcounty_3"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_style"
+                    android:autofillHints=""
+                    android:textSize="15sp"
+                    android:inputType="text"
+                    tools:ignore="LabelFor" />
+                <EditText
+                    android:layout_row="3"
+                    android:layout_column="2"
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:id="@+id/financial_year_3"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_style"
+                    android:autofillHints=""
+                    android:textSize="15sp"
+                    android:inputType="text"
+                    tools:ignore="LabelFor" />
+                <EditText
+                    android:layout_row="3"
+                    android:layout_column="3"
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:id="@+id/service_3"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_style"
+                    android:autofillHints=""
+                    android:textSize="15sp"
+                    android:inputType="text"
+                    tools:ignore="LabelFor" />
+                <EditText
+                    android:layout_row="3"
+                    android:layout_column="4"
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:id="@+id/community_need_3"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_style"
+                    android:autofillHints=""
+                    android:textSize="15sp"
+                    android:inputType="text"
+                    tools:ignore="LabelFor" />
+
+<!--                row 4 -->
+
+                <EditText
+                    android:layout_row="4"
+                    android:layout_column="0"
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:id="@+id/district_4"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_style"
+                    android:autofillHints=""
+                    android:textSize="15sp"
+                    android:inputType="text"
+                    tools:ignore="LabelFor" />
+                <EditText
+                    android:layout_row="4"
+                    android:layout_column="1"
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:id="@+id/subcounty_4"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_style"
+                    android:autofillHints=""
+                    android:textSize="15sp"
+                    android:inputType="text"
+                    tools:ignore="LabelFor" />
+                <EditText
+                    android:layout_row="4"
+                    android:layout_column="2"
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:id="@+id/financial_year_4"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_style"
+                    android:autofillHints=""
+                    android:textSize="15sp"
+                    android:inputType="text"
+                    tools:ignore="LabelFor" />
+                <EditText
+                    android:layout_row="4"
+                    android:layout_column="3"
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:id="@+id/service_4"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_style"
+                    android:autofillHints=""
+                    android:textSize="15sp"
+                    android:inputType="text"
+                    tools:ignore="LabelFor" />
+                <EditText
+                    android:layout_row="4"
+                    android:layout_column="4"
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:id="@+id/community_need_4"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_style"
+                    android:autofillHints=""
+                    android:textSize="15sp"
+                    android:inputType="text"
+                    tools:ignore="LabelFor" />
+
+<!--                row 5 -->
+
+                <EditText
+                    android:layout_row="5"
+                    android:layout_column="0"
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:id="@+id/district_5"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_style"
+                    android:autofillHints=""
+                    android:textSize="15sp"
+                    android:inputType="text"
+                    tools:ignore="LabelFor" />
+                <EditText
+                    android:layout_row="5"
+                    android:layout_column="1"
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:id="@+id/subcounty_5"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_style"
+                    android:autofillHints=""
+                    android:textSize="15sp"
+                    android:inputType="text"
+                    tools:ignore="LabelFor" />
+                <EditText
+                    android:layout_row="5"
+                    android:layout_column="2"
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:id="@+id/financial_year_5"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_style"
+                    android:autofillHints=""
+                    android:textSize="15sp"
+                    android:inputType="text"
+                    tools:ignore="LabelFor" />
+                <EditText
+                    android:layout_row="5"
+                    android:layout_column="3"
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:id="@+id/service_5"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_style"
+                    android:autofillHints=""
+                    android:textSize="15sp"
+                    android:inputType="text"
+                    tools:ignore="LabelFor" />
+                <EditText
+                    android:layout_row="5"
+                    android:layout_column="4"
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:id="@+id/community_need_5"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_style"
+                    android:autofillHints=""
+                    android:textSize="15sp"
+                    android:inputType="text"
+                    tools:ignore="LabelFor" />
+<!-- row 6 -->
+                <EditText
+                    android:layout_row="6"
+                    android:layout_column="0"
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:id="@+id/district_6"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_style"
+                    android:autofillHints=""
+                    android:textSize="15sp"
+                    android:inputType="text"
+                    tools:ignore="LabelFor" />
+                <EditText
+                    android:layout_row="6"
+                    android:layout_column="1"
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:id="@+id/subcounty_6"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_style"
+                    android:autofillHints=""
+                    android:textSize="15sp"
+                    android:inputType="text"
+                    tools:ignore="LabelFor" />
+                <EditText
+                    android:layout_row="6"
+                    android:layout_column="2"
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:id="@+id/financial_year_6"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_style"
+                    android:autofillHints=""
+                    android:textSize="15sp"
+                    android:inputType="text"
+                    tools:ignore="LabelFor" />
+                <EditText
+                    android:layout_row="6"
+                    android:layout_column="3"
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:id="@+id/service_6"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_style"
+                    android:autofillHints=""
+                    android:textSize="15sp"
+                    android:inputType="text"
+                    tools:ignore="LabelFor" />
+                <EditText
+                    android:layout_row="6"
+                    android:layout_column="4"
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:id="@+id/community_need_6"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_style"
+                    android:autofillHints=""
+                    android:textSize="15sp"
+                    android:inputType="text"
+                    tools:ignore="LabelFor" />
+
+<!--                row 7 -->
+
+                <EditText
+                    android:layout_row="7"
+                    android:layout_column="0"
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:id="@+id/district_7"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_style"
+                    android:autofillHints=""
+                    android:textSize="15sp"
+                    android:inputType="text"
+                    tools:ignore="LabelFor" />
+                <EditText
+                    android:layout_row="7"
+                    android:layout_column="1"
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:id="@+id/subcounty_7"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_style"
+                    android:autofillHints=""
+                    android:textSize="15sp"
+                    android:inputType="text"
+                    tools:ignore="LabelFor" />
+                <EditText
+                    android:layout_row="7"
+                    android:layout_column="2"
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:id="@+id/financial_year_7"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_style"
+                    android:autofillHints=""
+                    android:textSize="15sp"
+                    android:inputType="text"
+                    tools:ignore="LabelFor" />
+                <EditText
+                    android:layout_row="7"
+                    android:layout_column="3"
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:id="@+id/service_7"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_style"
+                    android:autofillHints=""
+                    android:textSize="15sp"
+                    android:inputType="text"
+                    tools:ignore="LabelFor" />
+                <EditText
+                    android:layout_row="7"
+                    android:layout_column="4"
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:id="@+id/community_need_7"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_style"
+                    android:autofillHints=""
+                    android:textSize="15sp"
+                    android:inputType="text"
+                    tools:ignore="LabelFor" />
+            </GridLayout>
+        </HorizontalScrollView>
+
+        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:id="@+id/saved_form_data"
+            card_view:cardCornerRadius="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginStart="70dp"
+            android:layout_marginRight="70dp"
+            android:layout_marginEnd="70dp"
+            android:layout_marginBottom="27dp"
+            card_view:cardBackgroundColor="@color/colorPrimaryDark">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="0dp"
+                android:text="Save"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif-condensed"
+                android:textColor="#000"/>
+
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+</ScrollView>
