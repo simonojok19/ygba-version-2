@@ -243,4 +243,14 @@ public class YGBARepository {
             }
         });
     }
+
+    public List<CommunityWish> getCommunityWishes() throws ExecutionException, InterruptedException {
+        Callable<List<CommunityWish>> listCallable = new Callable<List<CommunityWish>>() {
+            @Override
+            public List<CommunityWish> call() throws Exception {
+                return ygbDatabase.communityWishesDao().getCommunityWishesForUploaded();
+            }
+        };
+        return YGBDatabase.db_executor.submit(listCallable).get();
+    }
 }
