@@ -20,6 +20,7 @@ import org.ygba.youthgobudget.dialogs.DistrictPickerActivity;
 import org.ygba.youthgobudget.dialogs.SubCountyPickerActivity;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class CommunityWishesActivity extends AppCompatActivity implements  AdapterView.OnItemSelectedListener {
     private   final int DISTRICT_NAME_REQUESTER_CODE = 1;
@@ -204,7 +205,7 @@ public class CommunityWishesActivity extends AppCompatActivity implements  Adapt
                         selectedSector,
                         divisionEditText.getText().toString(),
                         selectedFinancialYear,
-                        getWish()[0],
+                        Objects.requireNonNull(getWish())[0],
                         getWish()[1]
                 );
                 communityWishesActivityViewModel.saveCommunityWish(communityWish);
@@ -290,16 +291,20 @@ public class CommunityWishesActivity extends AppCompatActivity implements  Adapt
     private String[] getWish() {
         if (selectedSector.equals(sectorList[0])) {
             return getAgricultureAnswers();
+        } else if (selectedSector.equals(sectorList[1])) {
+            return getHealthSectorAnswers();
+        } else {
+            return null;
         }
-        return null;
+    }
+
+    private String[] getHealthSectorAnswers() {
+        return new String[0];
     }
 
     private String[] getAgricultureAnswers() {
         RadioGroup group = findViewById(R.id.agriculture_sector_radio_group);
         switch (group.getCheckedRadioButtonId()) {
-            case R.id.agricultural_extension_services: {
-                return new String[]{educations.get(0).service_point, educations.get(0).community_need};
-            }
             case R.id.market_linkages: {
                 return new String[]{educations.get(1).service_point, educations.get(1).community_need};
             }
@@ -321,7 +326,9 @@ public class CommunityWishesActivity extends AppCompatActivity implements  Adapt
             case R.id.irrigation_systems: {
                 return new String[]{educations.get(7).service_point, educations.get(7).community_need};
             }
+            default: {
+                return new String[]{educations.get(0).service_point, educations.get(0).community_need};
+            }
         }
-        return null;
     }
 }
