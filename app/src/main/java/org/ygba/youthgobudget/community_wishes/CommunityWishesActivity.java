@@ -326,8 +326,20 @@ public class CommunityWishesActivity extends AppCompatActivity implements  Adapt
     private String[] getHealthSectorAnswers() {
         RadioGroup group = findViewById(R.id.health_sector_radio_group);
         switch (group.getCheckedRadioButtonId()) {
+            case R.id.hiv_information_services: {
+                return new String[] { healths.get(0).service_point, healths.get(0).community_need };
+            }
+            case R.id.essential_drugs: {
+                return new String[] { healths.get(1).service_point, healths.get(1).community_need };
+            }
+            case R.id.strengthening_and_monitoring_services: {
+                return new String[] { healths.get(2).service_point, healths.get(2).community_need };
+            }
+            case R.id.infrastructure_development: {
+                return new String[] { healths.get(3).service_point, healths.get(3).community_need };
+            }
             default: {
-                return null;
+                return new String[] { healths.get(4).service_point, healths.get(4).community_need };
             }
         }
     }
