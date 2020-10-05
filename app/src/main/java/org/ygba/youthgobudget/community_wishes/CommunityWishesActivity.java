@@ -204,8 +204,8 @@ public class CommunityWishesActivity extends AppCompatActivity implements  Adapt
                         selectedSector,
                         divisionEditText.getText().toString(),
                         selectedFinancialYear,
-                        "Education",
-                        "There must be enough books"
+                        getWish()[0],
+                        getWish()[1]
                 );
                 communityWishesActivityViewModel.saveCommunityWish(communityWish);
             }
@@ -285,5 +285,15 @@ public class CommunityWishesActivity extends AppCompatActivity implements  Adapt
         public void setCommunity_need(String community_need) {
             this.community_need = community_need;
         }
+    }
+
+    private String[] getWish() {
+        if (selectedSector.equals(sectorList[0])) {
+            return getAgricultureAnswers();
+        }
+    }
+
+    private String[] getAgricultureAnswers() {
+        return null;
     }
 }
