@@ -17,9 +17,10 @@ public class Seeder {
         ygbaRepository = YGBARepository.getInstance(YGBDatabase.getInstance(application));
     }
     public void seed() {
-//        seedWaterAndEnvironment();
-//        seedAgriculture();
-//        seedSocialDevelopment();
+        seedWaterAndEnvironment();
+        seedAgriculture();
+        seedSocialDevelopment();
+        seedCommunityWishes();
     }
 
     public void seedAgriculture() {
