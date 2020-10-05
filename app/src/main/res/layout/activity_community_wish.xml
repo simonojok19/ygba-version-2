@@ -243,17 +243,12 @@
         <RadioGroup
             android:visibility="visible"
             android:id="@+id/agriculture_sector_radio_group"
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            style="@style/AppTheme.RadioGroupStyle.Vertical">
 
-            <RadioButton android:id="@+id/agricultural_extension_services"
+            <RadioButton
+                android:id="@+id/agricultural_extension_services"
                 android:checked="true"
-                android:textSize="15sp"
-                android:layout_marginEnd="10dp"
-                android:textColor="@color/colorPrimaryText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/AppTheme.RadioButtonStyle"
                 android:text="@string/agricultural_extension_services" />
 
             <TextView
@@ -261,11 +256,8 @@
                 style="@style/AppTheme.InputHintStyle"/>
 
             <RadioButton
-                android:textSize="15sp"
-                android:textColor="@color/colorPrimaryText"
+                style="@style/AppTheme.RadioButtonStyle"
                 android:id="@+id/market_linkages"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:text="@string/market_linkages" />
 
             <TextView
@@ -273,11 +265,8 @@
                 style="@style/AppTheme.InputHintStyle"/>
 
             <RadioButton
-                android:textSize="15sp"
-                android:textColor="@color/colorPrimaryText"
+                style="@style/AppTheme.RadioButtonStyle"
                 android:id="@+id/input_and_tools_provision"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:text="@string/input_and_tools_provision" />
 
             <TextView
@@ -285,11 +274,8 @@
                 style="@style/AppTheme.InputHintStyle"/>
 
             <RadioButton
-                android:textSize="15sp"
-                android:textColor="@color/colorPrimaryText"
+                style="@style/AppTheme.RadioButtonStyle"
                 android:id="@+id/access_to_credit_and_capital"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:text="@string/access_to_credit_and_capital" />
 
             <TextView
@@ -297,11 +283,8 @@
                 style="@style/AppTheme.InputHintStyle"/>
 
             <RadioButton
-                android:textSize="15sp"
-                android:textColor="@color/colorPrimaryText"
+                style="@style/AppTheme.RadioButtonStyle"
                 android:id="@+id/access_to_hands_training"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:text="@string/access_to_hands_training" />
 
             <TextView
@@ -309,11 +292,8 @@
                 style="@style/AppTheme.InputHintStyle"/>
 
             <RadioButton
-                android:textSize="15sp"
-                android:textColor="@color/colorPrimaryText"
+                style="@style/AppTheme.RadioButtonStyle"
                 android:id="@+id/value_addition"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:text="@string/value_addition" />
 
             <TextView
@@ -321,11 +301,8 @@
                 style="@style/AppTheme.InputHintStyle"/>
 
             <RadioButton
-                android:textSize="15sp"
-                android:textColor="@color/colorPrimaryText"
+                style="@style/AppTheme.RadioButtonStyle"
                 android:id="@+id/recruitment_of_officers"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:text="@string/recruitment_of_officers" />
 
             <TextView
@@ -333,11 +310,8 @@
                 android:text="@string/recruitment_of_officers_hint" />
 
             <RadioButton
-                android:textSize="15sp"
-                android:textColor="@color/colorPrimaryText"
+                style="@style/AppTheme.RadioButtonStyle"
                 android:id="@+id/irrigation_systems"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:text="@string/irrigation_systems" />
 
             <TextView
