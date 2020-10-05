@@ -241,26 +241,131 @@
             tools:ignore="RtlSymmetry" />
 
         <RadioGroup
-            android:visibility="gone"
+            android:visibility="visible"
             android:id="@+id/agriculture_sector_radio_group"
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-            <RadioButton android:id="@+id/question1Yes"
+            <RadioButton android:id="@+id/agricultural_extension_services"
                 android:checked="true"
                 android:textSize="15sp"
                 android:layout_marginEnd="10dp"
                 android:textColor="@color/colorPrimaryText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/yes" />
+                android:text="@string/agricultural_extension_services" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/agricultural_extension_services_hint"
+                android:textSize="15sp"
+                android:textColor="@color/colorPrimaryText"/>
+
             <RadioButton
                 android:textSize="15sp"
                 android:textColor="@color/colorPrimaryText"
-                android:id="@+id/question2No"
+                android:id="@+id/market_linkages"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/no" />
+                android:text="@string/market_linkages" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/market_linkages_hint"
+                android:textSize="15sp"
+                android:textColor="@color/colorPrimaryText"/>
+
+            <RadioButton
+                android:textSize="15sp"
+                android:textColor="@color/colorPrimaryText"
+                android:id="@+id/input_and_tools_provision"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/input_and_tools_provision" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/input_and_tools_provision_hint"
+                android:textSize="15sp"
+                android:textColor="@color/colorPrimaryText"/>
+
+            <RadioButton
+                android:textSize="15sp"
+                android:textColor="@color/colorPrimaryText"
+                android:id="@+id/access_to_credit_and_capital"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/access_to_credit_and_capital" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/access_to_credit_and_capital_hint"
+                android:textSize="15sp"
+                android:textColor="@color/colorPrimaryText"/>
+
+            <RadioButton
+                android:textSize="15sp"
+                android:textColor="@color/colorPrimaryText"
+                android:id="@+id/access_to_hands_training"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/access_to_hands_training" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/access_to_hands_training_hint"
+                android:textSize="15sp"
+                android:textColor="@color/colorPrimaryText"/>
+
+            <RadioButton
+                android:textSize="15sp"
+                android:textColor="@color/colorPrimaryText"
+                android:id="@+id/value_addition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/value_addition" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/value_addition_hint"
+                android:textSize="15sp"
+                android:textColor="@color/colorPrimaryText"/>
+
+            <RadioButton
+                android:textSize="15sp"
+                android:textColor="@color/colorPrimaryText"
+                android:id="@+id/recruitment_of_officers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/recruitment_of_officers" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/recruitment_of_officers_hint"
+                android:textSize="15sp"
+                android:textColor="@color/colorPrimaryText"/>
+
+            <RadioButton
+                android:textSize="15sp"
+                android:textColor="@color/colorPrimaryText"
+                android:id="@+id/irrigation_systems"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/irrigation_systems" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/irrigation_systems_hint"
+                android:textSize="15sp"
+                android:textColor="@color/colorPrimaryText"/>
         </RadioGroup>
 
 

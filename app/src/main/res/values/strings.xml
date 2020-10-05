@@ -428,4 +428,20 @@
     <string name="hint_please_type">Please Type</string>
     <string name="hint_number_of_visits">NUmber of visits</string>
     <string name="wish_label">"COMMUNITY WISHES OR NEEDS "</string>
+    <string name="agricultural_extension_services">Agricultural extension services</string>
+    <string name="agricultural_extension_services_hint">Reason(s): farmers need know-how in best agronomical practices to increase yields and production</string>
+    <string name="market_linkages">Market linkages</string>
+    <string name="market_linkages_hint">Reason(s): farmers need better prices for their agricultural produces</string>
+    <string name="input_and_tools_provision"><![CDATA["Inputs & tools provision (seeds, hoes, sprayers, etc.) "]]></string>
+    <string name="input_and_tools_provision_hint"><![CDATA[Reason(s): some farmers lack these tools & inputs to increase on their production]]></string>
+    <string name="access_to_credit_and_capital">Access to credit and capital</string>
+    <string name="access_to_credit_and_capital_hint">Reason(s): farmers need support to expand their commercial production</string>
+    <string name="access_to_hands_training">Access to hands-on training in best agronomical practices</string>
+    <string name="access_to_hands_training_hint">Reason(s): farmers lack knowledge and skills in best agronomical practices</string>
+    <string name="value_addition">Value addition tools or equipment</string>
+    <string name="value_addition_hint"><![CDATA[Reason(s): \tSome farmers produce in large quantity & lack immediate market for their produce;  \t\t\tMost produces attract lower prices at harvest stage]]></string>
+    <string name="recruitment_of_officers"><![CDATA[Recruitment of qualified & competent agricultural officer(s)]]></string>
+    <string name="recruitment_of_officers_hint">Reason(s): Limited number of agricultural officers at the sub-counties to provide extension services to the increasing number of farmers</string>
+    <string name="irrigation_systems">Irrigation systems</string>
+    <string name="irrigation_systems_hint">Reason(s): Farmer entirely depend on rainfall limiting their production, yet they could produce through the year using cost-effective irrigation systems given the enormous available water sources such as rivers and streams</string>
 </resources>
