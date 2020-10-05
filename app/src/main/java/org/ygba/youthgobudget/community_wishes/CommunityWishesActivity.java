@@ -34,7 +34,7 @@ public class CommunityWishesActivity extends AppCompatActivity implements  Adapt
     private final int DISPLAY_SUCCESS_MESSAGE_ACTIVITY = 13;
     private int districtId = 0;
     RadioGroup question1RadioGroup;
-    Spinner quarterSpinner;
+    Spinner regionSpinner;
     Spinner financialSpinner;
     Spinner sectorSpinner;
 
@@ -48,10 +48,10 @@ public class CommunityWishesActivity extends AppCompatActivity implements  Adapt
     EditText agentTelephoneEditText;
     EditText agentNumberEditText;
 
-    private final String[] quarterList = {"I", "II", "III", "IV", "V", "VI", "VII"};
+    private final String[] regionList = {"Central", "Western", "Eastern", "Northern"};
     private final String[] financialYearList = {"2021/22", "2020/21", "2019/20"};
     private final String[] sectorList = {"Agriculture Sector", "Health Sector", "Education Sector"};
-    private String selectedQuarter;
+    private String selectedRegion;
     private String selectedFinancialYear;
     private String selectedSector = sectorList[1];
 
@@ -69,11 +69,21 @@ public class CommunityWishesActivity extends AppCompatActivity implements  Adapt
     }
 
     private void initViews() {
-        quarterSpinner = findViewById(R.id.region_spinner);
-        ArrayAdapter<String> aa=new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, quarterList);
+        regionSpinner = findViewById(R.id.region_spinner);
+        ArrayAdapter<String> aa=new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, regionList);
         aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        quarterSpinner.setAdapter(aa);
-        quarterSpinner.setOnItemSelectedListener(this);
+        regionSpinner.setAdapter(aa);
+        regionSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                selectedRegion = regionList[position];
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
 
         financialSpinner = findViewById(R.id.financial_year_spinner);
         ArrayAdapter<String> fa=new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, financialYearList);
@@ -148,8 +158,8 @@ public class CommunityWishesActivity extends AppCompatActivity implements  Adapt
             @Override
             public void onClick(View v) {
                 CommunityWish communityWish = new CommunityWish(
-                        "Central",
-                        "Masaka",
+                        selectedRegion,
+                        districtText.getText().toString(),
                         "Agriculture",
                         "Kimanya",
                         selectedFinancialYear,
@@ -166,7 +176,7 @@ public class CommunityWishesActivity extends AppCompatActivity implements  Adapt
         if (view.getId() == R.id.financial_year_spinner) {
             selectedFinancialYear = financialYearList[position];
         } else if (view.getId() == R.id.region_spinner) {
-            selectedQuarter = quarterList[position];
+            selectedRegion = regionList[position];
         } else if (view.getId() == R.id.sector_spinner) {
             selectedSector = sectorList[position];
             if (position == 1) {
@@ -200,8 +210,8 @@ public class CommunityWishesActivity extends AppCompatActivity implements  Adapt
     }
 
     private void clearForm() {
-        selectedQuarter = "";
-        selectedQuarter = "";
+        selectedRegion = "";
+        selectedRegion = "";
         villageEditText.setText("");
         parishTextEdit.setText("");
         parishTextEdit.setText("");
