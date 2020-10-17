@@ -158,6 +158,7 @@
 
                     <ImageView
                         android:layout_width="107dp"
+                        android:id="@+id/ic_vc_pic"
                         android:layout_height="wrap_content"
                         android:src="@drawable/ic_vc_pic" />
 
@@ -275,6 +276,7 @@
                     style="@style/AppTheme.LocalGovernmentStructureColumn">
 
                     <ImageView
+                        android:id="@+id/ic_diso_pic"
                         android:layout_width="107dp"
                         android:layout_height="wrap_content"
                         android:src="@drawable/ic_diso_pic" />

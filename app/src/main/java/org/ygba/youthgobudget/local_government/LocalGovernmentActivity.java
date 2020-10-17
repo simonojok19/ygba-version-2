@@ -11,7 +11,7 @@ import android.widget.ImageView;
 import org.ygba.youthgobudget.R;
 
 public class LocalGovernmentActivity extends AppCompatActivity {
-    private ImageView ic_dc_pic,ic_cao_pic,ic_cp_pic,ic_rdc_pic,ic_hod_pic,ic_ardc_pic,ic_sub_chiefs,ic_sec_pic;
+    private ImageView ic_dc_pic,ic_cao_pic,ic_cp_pic,ic_rdc_pic,ic_hod_pic,ic_ardc_pic,ic_sub_chiefs,ic_sec_pic, ic_vc_pic, ic_diso_pic;
 
     private String title,message;
 
@@ -27,16 +27,15 @@ public class LocalGovernmentActivity extends AppCompatActivity {
         ic_ardc_pic = findViewById(R.id.ic_ardc_pic);
         ic_sub_chiefs = findViewById(R.id.ic_sub_chiefs);
         ic_sec_pic = findViewById(R.id.ic_sec_pic);
+        ic_vc_pic = findViewById(R.id.ic_vc_pic);
+        ic_diso_pic = findViewById(R.id.ic_diso_pic);
 
         ic_sec_pic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 title = "Secretaries for services";
                 message = "A secretary shall have responsibility for such functions of the district council as the district chairperson may, from time to time, assign to him or her.\n\nThe chairperson shall assign one of the secretaries to be responsible for health and children welfare";
-
                 displayDuties(title,message);
-
-
             }
         });
 
@@ -44,7 +43,8 @@ public class LocalGovernmentActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 title = "Duties and Responsibilities of the sub-county chief";
-                message = "";
+                message = "A secretary shall have responsibility for such functions of the district council as the district chairperson may, from time to time, assign to him or her.\n\nThe chairperson shall assign one of the secretaries to be responsible for health and children welfare";
+                displayDuties(title, message);
             }
         });
 
@@ -71,11 +71,6 @@ public class LocalGovernmentActivity extends AppCompatActivity {
 
             }
         });
-
-
-
-
-
         ic_rdc_pic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -116,6 +111,25 @@ public class LocalGovernmentActivity extends AppCompatActivity {
                 title = "District Councils";
                 message = "Exercise all political and executive powers and functions \n\nProvide services as it deems fit with the exception of the functions, powers and services listed under Part 1 of the Second Schedule to this Act \n\nProtect the Constitution and other laws of Uganda and promote democratic governance;\n\nEnsure the implementation and compliance with Government policy \n\nWithout prejudice to the generality of subsection (1), a district council shall perform and carry on the functions and services specified under Part 2 of the Second Schedule to this Act \n\nUrban councils shall have autonomy over their planning and financial management when carrying out the functions and services specified under Part 3 of the Second Schedule to this Act \n\nSubject to subsection (5), in rural areas, a local government council may devolve to a lower council some of the functions and services specified under Part 4 of the Second Schedule to this Act and, in urban areas, functions and services specified under Part 5B of the Second Schedule.";
 
+                displayDuties(title,message);
+            }
+        });
+
+        ic_diso_pic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                title = "DISO And ADISOs";
+                message = "Exercise all political and executive powers and functions \n\nProvide services as it deems fit with the exception of the functions, powers and services listed under Part 1 of the Second Schedule to this Act \n\nProtect the Constitution and other laws of Uganda and promote democratic governance;\n\nEnsure the implementation and compliance with Government policy \n\nWithout prejudice to the generality of subsection (1), a district council shall perform and carry on the functions and services specified under Part 2 of the Second Schedule to this Act \n\nUrban councils shall have autonomy over their planning and financial management when carrying out the functions and services specified under Part 3 of the Second Schedule to this Act \n\nSubject to subsection (5), in rural areas, a local government council may devolve to a lower council some of the functions and services specified under Part 4 of the Second Schedule to this Act and, in urban areas, functions and services specified under Part 5B of the Second Schedule.";
+
+                displayDuties(title,message);
+            }
+        });
+
+        ic_vc_pic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                title = "Vice Chairman LC 5";
+                message = getString(R.string.role_vc_lc_5);
                 displayDuties(title,message);
             }
         });

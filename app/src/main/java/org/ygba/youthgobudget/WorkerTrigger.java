@@ -97,7 +97,7 @@ public class WorkerTrigger {
         PeriodicWorkRequest workRequest = new PeriodicWorkRequest.Builder(
                 CommunityWishesUploadWorker.class,
                 WORKER_TIME_INTERVAL_MINUTES,
-                TimeUnit.MINUTES
+                TimeUnit.HOURS
         ).setConstraints(constraints).build();
         WorkManager.getInstance(context).enqueue(workRequest);
     }

@@ -54,6 +54,7 @@
             android:name=".budget_cycle.BudgetCycleActivity"
             android:parentActivityName=".MainActivity" />
         <activity
+            android:label="Local Government Structure"
             android:name=".local_government.LocalGovernmentActivity"
             android:parentActivityName=".MainActivity" />
         <activity

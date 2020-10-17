@@ -461,4 +461,18 @@
     <string name="school_infrastructure">School infrastructures i.e. classrooms and toilet facilities</string>
     <string name="school_infrastructure_hint">Reason(s): \tLimited number of classrooms to accommodate the learners  \t\t\tLimited number toilets at most schools</string>
     <string name="region_label">Region</string>
+    <string name="role_vc_lc_5">
+        Preside at meetings of the executive committee of the district;
+        Monitor the general administration of the district;
+        Monitor the implementation of council decisions;
+        Subject to Section 79 of this act and Article 197 of the constitution, monitor and coordinate the activities of the Municipal and Town councils and of other lower local governments and administrative units in the district
+        On behalf of the council, oversee the performance of persons employed by the government to provide services in the district and to monitor the provision of government services or the implementation of projects in the district;
+        Coordinate and monitor government functions as between the district and the government;
+        Perform other functions that may be necessary for the better functioning of the district council, or which may be incidental to the functions of chairperson or imposed on the chairperson by any law.
+        The chairperson shall abide by, uphold and safeguard the constitution, the district laws and other laws of Uganda and shall endeavor to promote the welfare of the citizens in the district.
+        The subject to the constitution and this act, the functions conferred on the chairperson may be exercised by the chairperson directly or through elected or appointed officials subordinate to the chairperson.
+        The Chairperson shall, in the performance of his or her functions, be answerable to the district council.
+        The chairperson shall make a report to the council on the state of affairs of the district, at least once a year.
+
+    </string>
 </resources>
