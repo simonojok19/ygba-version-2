@@ -22,12 +22,12 @@ import static org.ygba.youthgobudget.utils.Constants.WORKER_TIME_INTERVAL_MINUTE
 public class WorkerTrigger {
 
     public static void startAllUploadWorker(Context context) {
-        startAgricultureUploadWorker(context);
-        startWaterAndEnvironmentUploadWorker(context);
-        startSocialDevelopmentUploadWorker(context);
-        startDistrictDownloadWorker(context);
-        startSubCountyDownloadWorker(context);
-        startCommunityWishesUploadWorker(context);
+//        startAgricultureUploadWorker(context);
+//        startWaterAndEnvironmentUploadWorker(context);
+//        startSocialDevelopmentUploadWorker(context);
+//        startDistrictDownloadWorker(context);
+//        startSubCountyDownloadWorker(context);
+//        startCommunityWishesUploadWorker(context);
     }
 
     private static void startAgricultureUploadWorker(Context context) {
